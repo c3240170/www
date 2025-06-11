@@ -17,9 +17,8 @@ header {
  margin: 30px auto;
  padding: 20px;
  border-radius: 10px;
- 
 }
-.product-section img {
+ img {
  width: 50%;
  display: block;
  margin: 0 auto 20px;
