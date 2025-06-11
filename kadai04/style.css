@@ -17,18 +17,15 @@ header {
  margin: 30px auto;
  padding: 20px;
  border-radius: 10px;
+ 
 }
  img {
  width: 50%;
  display: block;
  margin: 0 auto 20px;
+ text-align: center;
 }
-h2 {
- margin-top: 0;
-}
-p {
- margin-bottom: 20px;
-}
+
 .buy-button {
  display: inline-block;
  background-color: orange;
@@ -43,9 +40,9 @@ p {
 footer {
  background-color: #e0e0e0;
  padding: 15px 0;
+ text-align: center;
 }
 footer small {
- font-size: 0.9em;
  color: #555;
 }
 
