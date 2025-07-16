@@ -1,0 +1,52 @@
+/* style.css */
+body {
+ font-family: 'Arial', sans-serif;
+ margin: 0;
+ padding: 0;
+ line-height: 1.6;
+}
+header {
+ background: #0066cc;
+ color: #fff;
+ padding: 20px;
+ text-align: center;
+}
+nav {
+ background: #003366;
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+}
+nav a {
+ color: white;
+ padding: 15px 20px;
+ text-decoration: none;
+}
+nav a:hover {
+ background: #0055aa;
+}
+main {
+ padding: 20px;
+}
+section {
+ margin-bottom: 40px;
+}
+.grid {
+ display: grid;
+ gap: 20px;
+}
+
+.card {
+ border: 1px solid #ccc;
+ padding: 15px;
+ background: #f9f9f9;
+ transition: transform 0.3s ease;
+}
+.card:hover {
+ transform: scale(1.03);
+}
+.card img {
+ width: 100%;
+ height: auto;
+ display: block;
+}
