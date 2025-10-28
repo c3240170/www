@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>座席の予約</title>
+    <style>
+        body {
+            font-family: "メイリオ", sans-serif;
+        }
+
+        h1 {
+            font-weight: bold;
+        }
+
+        #yoyaku {
+            color: red;
+            margin-left: 5px; 
+        }
+
+        .kaijo {
+            display: flex; 
+            align-items: center; 
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>座席の予約</h1>
+
+    <div class="kaijo">
+        <span>東京会場</span>
+        <span id="yoyaku">(予約受付中)</span>
+    </div>
+
+    <div id="message">
+        <button onclick="showAnswer();">予約する</button>
+    </div>
+
+    <script>
+        function showAnswer() {
+            let messageBox = document.getElementById('message');
+            messageBox.textContent = 'ありがとうございました。';
+
+            let yoyakuBox = document.getElementById('yoyaku');
+            yoyakuBox.textContent = '(予約済み)';
+        }
+    </script>
+
+</body>
+
+</html>
+
