@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>入場料の一覧</title>
+  <style>
+    body {
+      font-family: "Yu Gothic", sans-serif;
+      margin: 30px;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    table {
+      border-collapse: collapse;
+      margin-top: 15px;
+      width: 500px;
+    }
+    th, td {
+      border: 1px solid #333;
+      padding: 8px 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #7fc6b8;
+    }
+  </style>
+</head>
+<body>
+  <h1>入場料の一覧</h1>
+  <table id="priceTable"></table>
+
+  <script>
+   
+    const prices = {
+      "大人": 800,
+      "高校生": 680,
+      "中学生": 450,
+      "小学生": 380
+    };
+
+
+    const table = document.getElementById("priceTable");
+
+  
+    let headerHTML = "<tr><th></th>";
+    for (const category in prices) {
+      headerHTML += `<th>${category}</th>`;
+    }
+    headerHTML += "</tr>";
+    table.insertAdjacentHTML("beforeend", headerHTML);
+
+  
+    for (let i = 1; i <= 5; i++) {
+      let rowHTML = `<tr><th>${i}人</th>`;
+      for (const category in prices) {
+        const total = prices[category] * i;
+        rowHTML += `<td>${total}円</td>`;
+      }
+      rowHTML += "</tr>";
+      table.insertAdjacentHTML("beforeend", rowHTML);
+    }
+  </script>
+</body>
+</html>
