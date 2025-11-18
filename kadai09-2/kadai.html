@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>クリック回数で分岐</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; }
+  #result { margin-top: 20px; font-size: 20px; white-space: pre-wrap; }
+  button { padding: 10px 20px; font-size: 18px; }
+</style>
+</head>
+<body>
+<h2>クリック回数デモ</h2>
+<button id="btn">クリック</button>
+<div id="result"></div>
+
+<script>
+let count = 0;
+
+document.getElementById("btn").addEventListener("click", function() {
+  count++;
+  let output = "";
+
+  switch (count) {
+    case 1:
+      for (let i = 0; i < 1; i++) output += "★";
+      break;
+
+    case 2:
+      for (let i = 0; i < 5; i++) output += "★";
+      break;
+
+    case 3:
+      for (let i = 1; i <= 5; i++) output += i + " ";
+      break;
+
+    case 4:
+      for (let i = 2; i <= 10; i += 2) output += i + " ";
+      break;
+
+    case 5:
+      let sum = 0;
+      for (let i = 1; i <= 5; i++) sum += i;
+      output = sum;
+      break;
+
+    default:
+      output = "クリアしました。カウントを0に戻します。";
+      count = 0;
+  }
+
+  document.getElementById("result").textContent = output;
+});
+</script>
+
+</body>
+</html>
