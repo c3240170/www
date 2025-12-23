@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>HTMLの表示</title>
+  <style>
+    .box {
+      border: 2px solid #777;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>HTMLの表示</h1>
+<p>ボックス内の表示されている部分のHTMLを表示します。</p>
+<div class="box" id="source">
+  <h3>人口800万人以上の都道府県</h3>
+  <ul>
+    <li>東京都</li>
+    <li>神奈川県</li>
+    <li>大阪府</li>
+  </ul>
+</div>
+
+<button id="btn">HTMLを表示</button>
+<div class="box" id="result">
+  ここにHTMLが表示されます。
+</div>
+
+<script>
+  const btn = document.querySelector("#btn");
+  const source = document.querySelector("#source");
+  const result = document.querySelector("#result");
+
+  btn.addEventListener("click", () => {
+    result.textContent = source.innerHTML;
+  });
+</script>
+
+</body>
+</html>
